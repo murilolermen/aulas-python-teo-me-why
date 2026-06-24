@@ -43,11 +43,11 @@ for cep in tqdm(ceps_validos):
     response = requests.get(url)
     dados.append(response.json())
 
-#%%
+
 dataset = pd.DataFrame(dados)
 dataset.to_csv("ceps.csv", index=False, encoding="utf-8-sig")
 
-#%%
+
 # Salvar os dados em um arquivo JSON
 with open("ceps.json", "w", encoding="utf-8") as file:
     
@@ -59,4 +59,3 @@ with open("ceps.json", "w", encoding="utf-8") as file:
 
 
 
-# %%
